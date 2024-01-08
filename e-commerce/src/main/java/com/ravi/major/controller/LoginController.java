@@ -32,7 +32,7 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping
+    @PostMapping("/register")
     public String registerPost(@ModelAttribute("user") User user, HttpServletRequest request) throws ServletException{
        String password = user.getPassword();
        user.setPassword(bCryptPasswordEncoder.encode(password));
